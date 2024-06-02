@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./ImageGallery.module.css";
 import ImageCard from "../ImageCard/ImageCard";
-import Initial from "../Initial/Initial";
+
 import { ImageResult } from "../../photo-api";
 const Status = {
   IDLE: 'idle',
