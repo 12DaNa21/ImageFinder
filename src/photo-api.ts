@@ -7,7 +7,7 @@ axios.defaults.baseURL = "https://api.unsplash.com/search/photos";
 const API_KEY = "cmAs6HtxbjC6lEDZMzpFFT7STM7v19ZxoddFTchLnas";
 
 
-interface ImageResult {
+export interface ImageResult {
   id: string;
   urls: {
     small: string;

@@ -10,6 +10,7 @@ interface ImageModalProps {
   image: string;
   imgLikes: number | null;
   user: string | null;
+  imageUrl: string;
 }
 
 Modal.setAppElement("#root");

@@ -3,7 +3,7 @@ import ImageCard from "../ImageCard/ImageCard";
 
 interface ImageGalleryProps {
   items: { id: string; url: string }[]; 
-  onImgClick: (url: string) => void; 
+  onImgClick: (url: string, likes: number, name: string) => void;
 }
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImgClick }) => {

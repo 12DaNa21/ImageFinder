@@ -10,7 +10,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
   const onSubmitBar = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const data = form.elements["topic"].value;
+    const data = (form.elements.namedItem("topic") as HTMLInputElement).value;
     if (data.trim() === "") {
       toast.error("Please, enter your request!");
       return;
