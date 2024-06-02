@@ -3,7 +3,7 @@ import css from "./ImageGallery.module.css";
 import ImageCard from "../ImageCard/ImageCard";
 
 interface ImageGalleryProps {
-  items: { id: string; url: string; likes: number; name: string }[]; 
+  items: ImageResult[]; 
   onImgClick: (url: string, likes: number, name: string) => void;
 }
 

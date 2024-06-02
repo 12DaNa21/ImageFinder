@@ -45,4 +45,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid rgb(41, 29, 209);
+    background-color: transparent;
   }
