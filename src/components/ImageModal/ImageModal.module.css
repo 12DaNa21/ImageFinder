@@ -1,0 +1,35 @@
+.img {
+    border-radius: 20px;
+    width: 500px;
+    height: 400px;
+    
+  }
+  .list {
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .textWrapper {
+    color: blue;
+    display: flex;
+    margin: 6px;
+    align-items: center;
+  }
+  
+  .item {
+    display: flex;
+  }
+  
+  .text {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 22px;
+    color: blue;
+  }
+  .inst {
+    
+    margin-right: 14px;
+  }
