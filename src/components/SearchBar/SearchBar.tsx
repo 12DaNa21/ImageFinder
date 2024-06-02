@@ -32,11 +32,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
             placeholder="Search images and photos"
           />
           <button className={css.btn} type="submit">
-            <IoIosSearch className={css.icon} size={15} />
+            <IoIosSearch className={css.icon} size={12} />
           </button>
         </div>
         <Toaster />
       </form>
+      
     </header>
   );
 }

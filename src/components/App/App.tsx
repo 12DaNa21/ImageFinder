@@ -87,7 +87,7 @@ const App: React.FC = () => {
           user={userName}
         />
       )}
-    </div>
+     </div>
   );
 }
 

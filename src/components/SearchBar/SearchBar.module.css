@@ -1,12 +1,16 @@
 .header {
-    background-color: rgb(81, 88, 212);
-    width: auto;
-    height: 50px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  border-radius: 4px;
+  background-color: rgb(81, 88, 212);
+  }  
   
   .form {
     display: flex;
@@ -36,7 +40,9 @@
     align-items: center;
     gap: 6px;
     cursor: pointer;
-    top: 20px;
+    top: 30%;
+    
+    
   }
   
   .btn:hover {
