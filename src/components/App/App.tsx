@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { fetchImages, ImageResult } from "../../photo-api";
-
 import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import Loader from "../Loader/Loader";
@@ -17,7 +16,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [modal, setModal] = useState<boolean>(false);
-  const [imgUrl, setImgsUrl] = useState<string[]>([]);
+  const [imgUrl, setImgsUrl] = useState<string>("");
   const [likes, setLikes] = useState<number | null>(null);
   const [userName, setUserName] = useState<string | null>(null);
 
@@ -58,7 +57,7 @@ const App: React.FC = () => {
     setPage(page + 1);
   };
 
-  const openModal = (url: string[], like: number, nameUser: string) => {
+  const openModal = (url: string, like: number, nameUser: string) => {
     setImgsUrl(url);
     setLikes(like);
     setUserName(nameUser);
