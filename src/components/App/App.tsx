@@ -16,9 +16,10 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [modal, setModal] = useState<boolean>(false);
-  const [imgUrl, setImgsUrl] = useState<string>("");
+  const [imgUrl, setImgsUrl] = useState<string>(""); // Consider using array if multiple images
   const [likes, setLikes] = useState<number | null>(null);
   const [userName, setUserName] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   useEffect(() => {
     if (!query) {
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         setImgs((prevImages) => [...prevImages, ...newImgs]);
       } catch (error) {
         setError(true);
+        setErrorMessage("Error fetching images. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -73,14 +75,13 @@ const App: React.FC = () => {
       <SearchBar onSubmit={handleSubmit} />
       {imgs.length > 0 && <ImageGallery onImgClick={openModal} items={imgs} />}
       {notFoundError && <NotFoundError />}
-      {error && <ErrorMessage />}
+      {error && <ErrorMessage message={errorMessage} />}
       {loading && <Loader />}
       {imgs.length > 0 && !loading && <LoadMoreBtn onClick={handleLoadMore} />}
       {modal && (
         <ImageModal
           image={imgUrl}
           imgModal={modal}
-          item={imgs}
           onModalClose={toggle}
           imgLikes={likes}
           user={userName}
